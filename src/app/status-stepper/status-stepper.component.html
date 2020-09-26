@@ -1,0 +1,34 @@
+<mat-horizontal-stepper labelPosition="bottom" #stepper>
+    <mat-step>
+        <ng-template matStepLabel>Before Travel</ng-template>
+        <div class="container">
+            <div class="row">
+
+                <app-disease-case-information></app-disease-case-information>
+                <app-before-vaccine-information></app-before-vaccine-information>
+
+            </div>
+        </div>
+        <app-before-health-tips-information></app-before-health-tips-information>
+        <app-before-activity-advice-information></app-before-activity-advice-information>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Travelling</ng-template>
+        <mat-list>
+            <app-disease-case-info-travelling></app-disease-case-info-travelling>
+            <mat-divider></mat-divider>
+            <app-restaurant-info-travelling></app-restaurant-info-travelling>
+            <mat-divider></mat-divider>
+            <app-pharmacy-info-travelling></app-pharmacy-info-travelling>
+            <mat-divider></mat-divider>
+            <app-health-tip-info-travelling></app-health-tip-info-travelling>
+            <mat-divider></mat-divider>
+            <app-health-reminder-info-travelling></app-health-reminder-info-travelling>
+        </mat-list>
+    </mat-step>
+
+    <mat-step>
+        <ng-template matStepLabel>After Travel</ng-template>
+        <app-sympton-checking-after-travelling></app-sympton-checking-after-travelling>
+    </mat-step>
+</mat-horizontal-stepper>
